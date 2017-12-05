@@ -8,7 +8,7 @@ phases:
       - sudo chmod +x /usr/local/bin/ecs-cli
       - curl -L "https://github.com/docker/compose/releases/download/1.16.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
       - ecs-cli configure --cluster tutorial --region us-east-1 --default-launch-type FARGATE --config-name tutorial
-      - ecs-cli configure profile --access-key $AWS_ACCESS_KEY_ID --secret-key $AWS_SECRET_ACCESS_KEY --profile-name  tutorial
+
       - $(aws ecr get-login --region us-east-1)
   build:
     commands:
