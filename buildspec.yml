@@ -23,3 +23,4 @@ phases:
       - echo Pushing the Docker image...
       - docker push 417564495042.dkr.ecr.us-east-1.amazonaws.com/httpd:$CODEBUILD_SOURCE_VERSION
       - ecs-cli compose --project-name tutorial service up
+      - ecs-cli ps
