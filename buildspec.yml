@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t httpd:latest .
+      - docker build -t httpd .
       - docker tag httpd:55 417564495042.dkr.ecr.us-east-1.amazonaws.com/httpd:55
   post_build:
     commands:
